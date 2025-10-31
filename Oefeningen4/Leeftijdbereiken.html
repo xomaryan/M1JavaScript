@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.10</title>
+</head>
+<body>
+<script>
+    function berekenLeeftijd(geboorteJaar, geboorteMaand, geboorteDag) {
+        let nu = new Date();  
+        let geboorteDatum = new Date(geboorteJaar, geboorteMaand - 1, geboorteDag);  
+        let verschilInMs = nu - geboorteDatum; 
+        let leeftijdInJaren = verschilInMs / (1000 * 60 * 60 * 24 * 365.25); 
+
+    return leeftijdInJaren;
+    }
+        let verschilInMs = new Date(2009, 4, 17);
+        let geboorteJaar = 2009;
+        let geboorteMaand = 4;
+        let geboorteDag = 17;
+        let leeftijd = berekenLeeftijd(geboorteJaar, geboorteMaand, geboorteDag);
+
+  console.log(`Welk jaar ben ik geboren? ${geboorteJaar}`);
+  console.log(`Welke maand ben ik geboren? ${geboorteMaand}`);
+  console.log(`Welke dag ben ik geboren? ${geboorteDag}`);
+  console.log(`Ik ben ${leeftijd.toFixed(2)} jaar oud`);
+</script>
+</body>
+</html>
