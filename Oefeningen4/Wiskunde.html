@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.10</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function kubesInhoud(lengte, hoogte, diepte){
+        return lengte * hoogte * diepte;
+    }
+    let inhoudKubus = kubesInhoud(10.5, 10, 10);
+    console.log("Volume van kubus:", inhoudKubus);
+
+
+    function cilinderInhoud(diameter, hoogte){
+        let radius = diameter / 2;
+        return Math.PI * Math.pow(radius, 2) * hoogte;
+    }
+    let inhoudCilinder = cilinderInhoud(10, 20);
+    console.log("Inhoud van cilinder:", inhoudCilinder.toFixed(2));
+
+
+    function schuineZijde(a, b) {
+        return Math.sqrt(Math.pow(a, 2)+ Math.pow(b,2));
+    }
+    let zijde = schuineZijde(3, 4);
+    console.log("Schuine zijde:", zijde);
+
+
+    function gemiddelde(a, b, c, d, e, f, g){
+        let som = a + b + c + d + e + f + g;
+        return som / 7;
+    }
+    let gem = gemiddelde (5, 10, 15, 20, 25, 30, 35);
+    console.log("Gemiddelde:", gem);
+</script>
+</html>

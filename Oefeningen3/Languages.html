@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang = "nl">
+<html lang ="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26.09</title>
+    <link rel="stylesheet" href="stijl.css">
+</head>
+<body>
+    <h1 id="title">Welkom op mijn website</h1>
+    <p id="paragraph">Dit is een voorbeeldvan een meertalige pagina.</p>
+
+    <button onclick="changeLanguage('nl')">Nederlands</button>
+    <button onclick="changeLanguage('en')">English</button>
+    <button onclick="changeLanguage('fr')">Francais</button>
+</body>
+<script>
+  function changeLanguage(lang){
+    const titles={
+      nl: "Welkom op mijn website",
+      en: "Welcome to my website",
+      fr: "Bienvenue sur mon site"
+    };
+    const paragraphs ={
+      nl: "Dit is een voorbeeld van een meertalige pagina.",
+      en: "This is an example of a multilinqual page.",
+      fr: "Ceci est un example de page multilique."
+    };
+    document.getElementById("title").innerText = titles[lang];
+    document.getElementById("paragraph").innerText = paragraphs[lang];
+    document.documentElement.lang = lang;
+
+  }
+</script>
+</html>
